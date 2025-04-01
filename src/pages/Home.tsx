@@ -1,42 +1,38 @@
 import React from 'react';
+import NavigationCard from '../components/NavigationCard';
 
 const Home: React.FC = () => {
+    const navigationItems = [
+        {
+            to: 'usestate',
+            title: 'useState',
+            description: 'Manage state in function components'
+        },
+        {
+            to: 'useeffect',
+            title: 'useEffect',
+            description: 'Handle side effects in your app'
+        },
+        {
+            to: 'usecontext',
+            title: 'useContext',
+            description: 'Share data without prop drilling'
+        }
+    ];
+
     return (
-        <>
-            {/* Header */}
-            <header className="bg-blue-600 text-white p-6 text-center">
-                <h1 className="text-4xl font-bold">Learn React Function Components</h1>
-                <p className="mt-2 text-lg">Simple examples to master React</p>
-            </header>
+        <main>
             <nav className="max-w-4xl mx-auto mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
-                <a
-                    href="/usestate"
-                    className="bg-white p-6 rounded-lg shadow-md text-center hover:bg-blue-50"
-                >
-                    <h2 className="text-xl font-semibold text-blue-600">useState</h2>
-                    <p className="text-gray-600 mt-2">Manage state in function components</p>
-                </a>
-                <a
-                    href="/useeffect"
-                    className="bg-white p-6 rounded-lg shadow-md text-center hover:bg-blue-50"
-                >
-                    <h2 className="text-xl font-semibold text-blue-600">useEffect</h2>
-                    <p className="text-gray-600 mt-2">Handle side effects in your app</p>
-                </a>
-                <a
-                    href="/usecontext"
-                    className="bg-white p-6 rounded-lg shadow-md text-center hover:bg-blue-50"
-                >
-                    <h2 className="text-xl font-semibold text-blue-600">useContext</h2>
-                    <p className="text-gray-600 mt-2">Share data without prop drilling</p>
-                </a>
-                {/* Thêm các thẻ <a> khác cho các topic như custom hooks, props, v.v. */}
+                {navigationItems.map((item, index) => (
+                    <NavigationCard
+                        key={index}
+                        to={item.to}
+                        title={item.title}
+                        description={item.description}
+                    />
+                ))}
             </nav>
-            {/* Footer */}
-            <footer className="bg-gray-800 text-white text-center p-4 mt-12">
-                <p>© 2025 React Function Examples</p>
-            </footer>
-        </>
+        </main>
     );
 };
 
