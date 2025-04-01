@@ -8,8 +8,8 @@ function App() {
             <div className="min-h-screen bg-gray-100">
                 <main>
                     <Routes>
-                        <Route path="/" element={<Home />} />
-                        <Route path="/example" element={<Example />} />
+                        <Route path="reactjs-example/" element={<Home />} />
+                        <Route path="reactjs-example/example" element={<Example />} />
                     </Routes>
                 </main>
             </div>
