@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Button } from '@/components/ui/button';
 
 const ToggleExample: React.FC = () => {
     const [isOn, setIsOn] = useState(false);
@@ -47,15 +48,12 @@ const Toggle = () => {
             <div className="mt-6 p-6 bg-white border rounded-lg">
                 <h3 className="text-lg font-medium text-gray-900 mb-4">Live Demo</h3>
                 <div className="space-y-4">
-                    <button
-                        className={`px-4 py-2 rounded-md transition-colors ${isOn
-                            ? 'bg-green-600 hover:bg-green-700 text-white'
-                            : 'bg-gray-600 hover:bg-gray-700 text-white'
-                            }`}
+                    <Button
                         onClick={toggleState}
+                        variant={isOn ? "default" : "outline"}
                     >
                         {isOn ? 'ON' : 'OFF'}
-                    </button>
+                    </Button>
                     <p className="text-gray-600">
                         Current state: {isOn ? 'Active' : 'Inactive'}
                     </p>

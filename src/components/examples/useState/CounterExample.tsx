@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Button } from '@/components/ui/button';
 
 const CounterExample: React.FC = () => {
     const [count, setCount] = useState(0);
@@ -63,24 +64,9 @@ const Counter = () => {
                 <h3 className="text-lg font-medium text-gray-900 mb-4">Live Demo</h3>
                 <div className="flex items-center space-x-4">
                     <span className="text-gray-700">Count: {count}</span>
-                    <button
-                        className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors"
-                        onClick={incrementCount}
-                    >
-                        Increment
-                    </button>
-                    <button
-                        className="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-700 transition-colors"
-                        onClick={decrementCount}
-                    >
-                        Decrement
-                    </button>
-                    <button
-                        className="bg-gray-600 text-white px-4 py-2 rounded-md hover:bg-gray-700 transition-colors"
-                        onClick={resetCount}
-                    >
-                        Reset
-                    </button>
+                    <Button onClick={incrementCount}>Increment</Button>
+                    <Button variant="destructive" onClick={decrementCount}>Decrement</Button>
+                    <Button variant="outline" onClick={resetCount}>Reset</Button>
                 </div>
             </div>
         </section>
