@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import UseState from "./pages/UseState";
+import UseEffect from "./pages/UseEffect.tsx";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
@@ -12,6 +13,7 @@ function App() {
                 <Routes>
                     <Route path="" element={<Home />} />
                     <Route path="usestate" element={<UseState />} />
+                    <Route path="useeffect" element={<UseEffect />} />
                 </Routes>
                 <Footer />
             </div>
