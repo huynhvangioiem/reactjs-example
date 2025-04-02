@@ -30,7 +30,7 @@ const Counter = () => {
     };
 
     const resetCount = () => {
-        setCount(0);s
+        setCount(0);
     };
 
     return (

@@ -4,6 +4,7 @@ import UseState from "./pages/UseState";
 import UseEffect from "./pages/UseEffect.tsx";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import UseCallback from "./pages/UseCallback.tsx";
 
 function App() {
     return (
@@ -14,6 +15,7 @@ function App() {
                     <Route path="" element={<Home />} />
                     <Route path="usestate" element={<UseState />} />
                     <Route path="useeffect" element={<UseEffect />} />
+                    <Route path="usecallback" element={<UseCallback />} />
                 </Routes>
                 <Footer />
             </div>

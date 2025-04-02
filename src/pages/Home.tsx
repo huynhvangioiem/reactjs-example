@@ -14,10 +14,16 @@ const Home: React.FC = () => {
             description: 'Handle side effects in your app'
         },
         {
+            to: 'usecallback',
+            title: 'useCallback',
+            description: 'Memoize functions to prevent unnecessary re-renders'
+        },
+        {
             to: 'usecontext',
             title: 'useContext',
             description: 'Share data without prop drilling'
-        }
+        },
+
     ];
 
     return (
