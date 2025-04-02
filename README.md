@@ -76,11 +76,11 @@ reactjs-example/
 
 ## Technologies Used
 
-- **React** (v19) - Latest version with improved features
-- **TypeScript** (v5.7) - For type safety and better developer experience
+- **React** (v18.3.1) - Latest stable version with improved features
+- **TypeScript** (v5.4.2) - For type safety and better developer experience
 - **Vite** (v6.2) - Fast build tool and development server
-- **TailwindCSS** (v4.0) - Utility-first CSS framework
-- **React Router DOM** (v7.4) - For client-side routing
+- **TailwindCSS** (v3.4.1) - Utility-first CSS framework
+- **React Router DOM** (v6.22.0) - For client-side routing
 - **Radix UI** - For accessible UI components
 - **Lucide React** - For beautiful icons
 - **Class Variance Authority** - For type-safe component variants
