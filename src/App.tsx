@@ -4,8 +4,8 @@ import UseState from "./pages/UseState";
 import UseEffect from "./pages/UseEffect";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import UseCallback from "./pages/UseCallback.tsx";
-import UseMemo from "./pages/UseMemo.tsx";
+import UseCallback from "./pages/UseCallback";
+import UseMemo from "./pages/UseMemo";
 
 function App() {
     return (
