@@ -1,23 +1,23 @@
 import React from 'react';
 
-const Overview: React.FC = () => {
-    const basicSyntax = `const [state, setState] = useState(initialValue);`;
+const basicSyntax = `const [state, setState] = useState(initialValue);`;
 
-    const primitiveExamples = `const [count, setCount] = useState(0);        // number
+const primitiveExamples = `const [count, setCount] = useState(0);        // number
 const [name, setName] = useState('');         // string
 const [isActive, setIsActive] = useState(false); // boolean
 `;
 
-    const objectArrayExamples = `const [user, setUser] = useState({            // object
+const objectArrayExamples = `const [user, setUser] = useState({            // object
     name: '',
     age: 0
 });
 const [items, setItems] = useState([]);       // array`;
 
-    const functionExample = `const [count, setCount] = useState(() => {    // lazy initialization
+const functionExample = `const [count, setCount] = useState(() => {    // lazy initialization
     return 0;
 });`;
 
+const Overview: React.FC = () => {
     return (
         <section id="overview" className="mb-12">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">Overview</h2>

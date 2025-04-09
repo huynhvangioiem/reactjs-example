@@ -1,22 +1,7 @@
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 
-const CounterExample: React.FC = () => {
-    const [count, setCount] = useState(0);
-
-    const incrementCount = () => {
-        setCount(prevCount => prevCount + 1);
-    };
-
-    const decrementCount = () => {
-        setCount(prevCount => prevCount - 1);
-    };
-
-    const resetCount = () => {
-        setCount(0);
-    };
-
-    const codeExample = `import { useState } from 'react';
+const codeExample = `import { useState } from 'react';
 
 const Counter = () => {
     const [count, setCount] = useState(0);
@@ -42,6 +27,21 @@ const Counter = () => {
         </div>
     );
 };`;
+
+const CounterExample: React.FC = () => {
+    const [count, setCount] = useState(0);
+
+    const incrementCount = () => {
+        setCount(prevCount => prevCount + 1);
+    };
+
+    const decrementCount = () => {
+        setCount(prevCount => prevCount - 1);
+    };
+
+    const resetCount = () => {
+        setCount(0);
+    };
 
     return (
         <section id="counter" className="mb-12">

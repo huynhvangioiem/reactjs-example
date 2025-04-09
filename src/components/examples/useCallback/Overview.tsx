@@ -1,24 +1,19 @@
 import React from 'react';
+const basicSyntax = `const memoizedCallback = useCallback(() => {
+    // callback function logic
+}, [dependencies]);`;
 
-const Overview: React.FC = () => {
-    const basicSyntax = `const memoizedCallback = useCallback(
-    () => {
-        // callback function logic
-    },
-    [dependencies]
-);`;
-
-    const simpleExample = `const handleClick = useCallback(() => {
+const simpleExample = `const handleClick = useCallback(() => {
     console.log('Button clicked!');
 }, []); // No dependencies`;
 
-    const withDependenciesExample = `const [count, setCount] = useState(0);
+const withDependenciesExample = `const [count, setCount] = useState(0);
 
 const handleIncrement = useCallback(() => {
     setCount(prevCount => prevCount + 1);
 }, []); // No dependencies needed`;
 
-    const withMemoExample = `const MemoizedChild = memo(({ onAction }) => {
+const withMemoExample = `const MemoizedChild = memo(({ onAction }) => {
     return <button onClick={onAction}>Click me</button>;
 });
 
@@ -30,6 +25,7 @@ const Parent = () => {
     return <MemoizedChild onAction={handleAction} />;
 };`;
 
+const Overview: React.FC = () => {
     return (
         <section id="overview" className="mb-12">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">Overview</h2>

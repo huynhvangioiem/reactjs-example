@@ -13,21 +13,7 @@ const ExpensiveButton = memo(({ onClick, label }: { onClick: () => void; label: 
 
 ExpensiveButton.displayName = 'ExpensiveButton';
 
-const MemoizedChildExample: React.FC = () => {
-    const [count1, setCount1] = useState(0);
-    const [count2, setCount2] = useState(0);
-
-    // Callback without useCallback - will create new function instance on every render
-    const handleIncrementNormal = () => {
-        setCount1(c => c + 1);
-    };
-
-    // Callback with useCallback - maintains same function instance between renders
-    const handleIncrementMemoized = useCallback(() => {
-        setCount2(c => c + 1);
-    }, []); // Empty dependency array since we're using the functional update form
-
-    const codeExample = `import { useState, useCallback, memo } from 'react';
+const codeExample = `import { useState, useCallback, memo } from 'react';
 
 // Memoized child component
 const ExpensiveButton = memo(({ onClick, label }) => {
@@ -68,6 +54,20 @@ const Parent = () => {
         </div>
     );
 };`;
+
+const MemoizedChildExample: React.FC = () => {
+    const [count1, setCount1] = useState(0);
+    const [count2, setCount2] = useState(0);
+
+    // Callback without useCallback - will create new function instance on every render
+    const handleIncrementNormal = () => {
+        setCount1(c => c + 1);
+    };
+
+    // Callback with useCallback - maintains same function instance between renders
+    const handleIncrementMemoized = useCallback(() => {
+        setCount2(c => c + 1);
+    }, []); // Empty dependency array since we're using the functional update form
 
     return (
         <section id="memoized-child" className="mb-12">

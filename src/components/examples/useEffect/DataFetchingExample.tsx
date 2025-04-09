@@ -6,46 +6,7 @@ interface Post {
     title: string;
 }
 
-const DataFetchingExample: React.FC = () => {
-    const [posts, setPosts] = useState<Post[]>([]);
-    const [loading, setLoading] = useState(false);
-    const [error, setError] = useState<string | null>(null);
-
-    const fetchPosts = async (signal: AbortSignal) => {
-        setLoading(true);
-        setError(null);
-        try {
-            const response = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=3', { signal });
-            if (!response.ok) throw new Error('Failed to fetch');
-            const data = await response.json();
-            setPosts(data);
-        } catch (err) {
-            if (err instanceof Error && err.name === 'AbortError') {
-                console.log('Fetch aborted');
-                return;
-            }
-            setError(err instanceof Error ? err.message : 'An error occurred');
-        } finally {
-            setLoading(false);
-        }
-    };
-
-    useEffect(() => {
-        const abortController = new AbortController();
-        fetchPosts(abortController.signal);
-
-        // Cleanup function to abort any in-flight requests when component unmounts
-        return () => {
-            abortController.abort();
-        };
-    }, []);
-
-    const handleRefresh = () => {
-        const abortController = new AbortController();
-        fetchPosts(abortController.signal);
-    };
-
-    const codeExample = `import React, { useState, useEffect } from 'react';
+const codeExample = `import React, { useState, useEffect } from 'react';
 
 interface Post {
     id: number;
@@ -59,7 +20,7 @@ const DataFetching = () => {
 
     useEffect(() => {
         const abortController = new AbortController();
-        
+
         const fetchPosts = async () => {
             setLoading(true);
             try {
@@ -99,6 +60,45 @@ const DataFetching = () => {
         </div>
     );
 };`;
+
+const DataFetchingExample: React.FC = () => {
+    const [posts, setPosts] = useState<Post[]>([]);
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState<string | null>(null);
+
+    const fetchPosts = async (signal: AbortSignal) => {
+        setLoading(true);
+        setError(null);
+        try {
+            const response = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=3', { signal });
+            if (!response.ok) throw new Error('Failed to fetch');
+            const data = await response.json();
+            setPosts(data);
+        } catch (err) {
+            if (err instanceof Error && err.name === 'AbortError') {
+                console.log('Fetch aborted');
+                return;
+            }
+            setError(err instanceof Error ? err.message : 'An error occurred');
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    useEffect(() => {
+        const abortController = new AbortController();
+        fetchPosts(abortController.signal);
+
+        // Cleanup function to abort any in-flight requests when component unmounts
+        return () => {
+            abortController.abort();
+        };
+    }, []);
+
+    const handleRefresh = () => {
+        const abortController = new AbortController();
+        fetchPosts(abortController.signal);
+    };
 
     return (
         <section id="data-fetching" className="mb-12">

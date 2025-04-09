@@ -1,30 +1,7 @@
 import React, { useState, useCallback, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 
-const DependencyExample: React.FC = () => {
-    const [multiplier, setMultiplier] = useState(1);
-    const [result, setResult] = useState(0);
-    const [renderCount, setRenderCount] = useState(0);
-
-    // This callback will be recreated when multiplier changes
-    const calculateResult = useCallback((number: number) => {
-        console.log(`Calculation performed with multiplier: ${multiplier}`);
-        return number * multiplier;
-    }, [multiplier]);
-
-    // Effect to demonstrate when the callback is recreated
-    useEffect(() => {
-        setRenderCount(prev => prev + 1);
-        console.log('calculateResult function was recreated');
-    }, [calculateResult]);
-
-    const handleCalculate = () => {
-        const number = 5;
-        const calculatedResult = calculateResult(number);
-        setResult(calculatedResult);
-    };
-
-    const codeExample = `import { useState, useCallback, useEffect } from 'react';
+const codeExample = `import { useState, useCallback, useEffect } from 'react';
 
 const DependencyExample = () => {
     const [multiplier, setMultiplier] = useState(1);
@@ -51,6 +28,29 @@ const DependencyExample = () => {
         </div>
     );
 };`;
+
+const DependencyExample: React.FC = () => {
+    const [multiplier, setMultiplier] = useState(1);
+    const [result, setResult] = useState(0);
+    const [renderCount, setRenderCount] = useState(0);
+
+    // This callback will be recreated when multiplier changes
+    const calculateResult = useCallback((number: number) => {
+        console.log(`Calculation performed with multiplier: ${multiplier}`);
+        return number * multiplier;
+    }, [multiplier]);
+
+    // Effect to demonstrate when the callback is recreated
+    useEffect(() => {
+        setRenderCount(prev => prev + 1);
+        console.log('calculateResult function was recreated');
+    }, [calculateResult]);
+
+    const handleCalculate = () => {
+        const number = 5;
+        const calculatedResult = calculateResult(number);
+        setResult(calculatedResult);
+    };
 
     return (
         <section id="dependency" className="mb-12">

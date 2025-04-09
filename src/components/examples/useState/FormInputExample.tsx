@@ -1,35 +1,8 @@
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 
-const FormInputExample: React.FC = () => {
-
-    const [formData, setFormData] = useState({
-        username: '',
-        email: '',
-        message: ''
-    });
-
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-        const { name, value } = e.target;
-        setFormData(prevState => ({
-            ...prevState,
-            [name]: value
-        }));
-    };
-
-    const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
-        console.log('Form submitted:', formData);
-        // Reset form
-        setFormData({
-            username: '',
-            email: '',
-            message: ''
-        });
-    };
-
-    const codeExample =
-        `import { useState } from 'react';
+const codeExample =
+    `import { useState } from 'react';
 
 const FormExample = () => {
     const [formData, setFormData] = useState({
@@ -79,6 +52,33 @@ const FormExample = () => {
         </form>
     );
 };`;
+
+const FormInputExample: React.FC = () => {
+
+    const [formData, setFormData] = useState({
+        username: '',
+        email: '',
+        message: ''
+    });
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        const { name, value } = e.target;
+        setFormData(prevState => ({
+            ...prevState,
+            [name]: value
+        }));
+    };
+
+    const handleSubmit = (e: React.FormEvent) => {
+        e.preventDefault();
+        console.log('Form submitted:', formData);
+        // Reset form
+        setFormData({
+            username: '',
+            email: '',
+            message: ''
+        });
+    };
 
     return (
         <section id="form-input" className="mb-12">
@@ -148,4 +148,4 @@ const FormExample = () => {
     );
 };
 
-export default FormInputExample; 
+export default FormInputExample;

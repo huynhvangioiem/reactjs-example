@@ -1,30 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const WindowResizeExample: React.FC = () => {
-    const [windowSize, setWindowSize] = useState({
-        width: window.innerWidth,
-        height: window.innerHeight
-    });
-
-    useEffect(() => {
-        // Handler to call on window resize
-        const handleResize = () => {
-            setWindowSize({
-                width: window.innerWidth,
-                height: window.innerHeight
-            });
-        };
-
-        // Add event listener
-        window.addEventListener('resize', handleResize);
-
-        // Remove event listener on cleanup
-        return () => {
-            window.removeEventListener('resize', handleResize);
-        };
-    }, []); // Empty array means this effect runs once on mount
-
-    const codeExample = `import React, { useState, useEffect } from 'react';
+const codeExample = `import React, { useState, useEffect } from 'react';
 
 const WindowResize = () => {
     const [windowSize, setWindowSize] = useState({
@@ -55,6 +31,30 @@ const WindowResize = () => {
         </div>
     );
 };`;
+
+const WindowResizeExample: React.FC = () => {
+    const [windowSize, setWindowSize] = useState({
+        width: window.innerWidth,
+        height: window.innerHeight
+    });
+
+    useEffect(() => {
+        // Handler to call on window resize
+        const handleResize = () => {
+            setWindowSize({
+                width: window.innerWidth,
+                height: window.innerHeight
+            });
+        };
+
+        // Add event listener
+        window.addEventListener('resize', handleResize);
+
+        // Remove event listener on cleanup
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []); // Empty array means this effect runs once on mount
 
     return (
         <section id="window-resize" className="mb-12">
@@ -95,4 +95,4 @@ const WindowResize = () => {
     );
 };
 
-export default WindowResizeExample; 
+export default WindowResizeExample;
