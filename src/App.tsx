@@ -5,6 +5,7 @@ import UseEffect from "./pages/UseEffect";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import UseCallback from "./pages/UseCallback.tsx";
+import UseMemo from "./pages/UseMemo.tsx";
 
 function App() {
     return (
@@ -16,6 +17,7 @@ function App() {
                     <Route path="usestate" element={<UseState />} />
                     <Route path="useeffect" element={<UseEffect />} />
                     <Route path="usecallback" element={<UseCallback />} />
+                    <Route path="usememo" element={<UseMemo />} />
                 </Routes>
                 <Footer />
             </div>
