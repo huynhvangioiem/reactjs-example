@@ -4,7 +4,7 @@ import UseState from "./pages/UseState";
 import UseEffect from "./pages/UseEffect";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import UseCallback from "./pages/UseCallback.tsx";
+import UseCallback from "./pages/UseCallback";
 
 function App() {
     return (
