@@ -7,9 +7,9 @@ const DependencyExample: React.FC = () => {
     const [renderCount, setRenderCount] = useState(0);
 
     // This callback will be recreated when multiplier changes
-    const calculateResult = useCallback((value: number) => {
+    const calculateResult = useCallback((number: number) => {
         console.log(`Calculation performed with multiplier: ${multiplier}`);
-        return value * multiplier;
+        return number * multiplier;
     }, [multiplier]);
 
     // Effect to demonstrate when the callback is recreated
@@ -19,8 +19,8 @@ const DependencyExample: React.FC = () => {
     }, [calculateResult]);
 
     const handleCalculate = () => {
-        const input = Math.floor(Math.random() * 10) + 1;
-        const calculatedResult = calculateResult(input);
+        const number = 5;
+        const calculatedResult = calculateResult(number);
         setResult(calculatedResult);
     };
 
@@ -30,8 +30,8 @@ const DependencyExample = () => {
     const [multiplier, setMultiplier] = useState(1);
 
     // This callback will be recreated when multiplier changes
-    const calculateResult = useCallback((value: number) => {
-        return value * multiplier;
+    const calculateResult = useCallback((number: number) => {
+        return number * multiplier;
     }, [multiplier]); // multiplier in dependencies
 
     // Effect to show when callback is recreated
@@ -40,9 +40,9 @@ const DependencyExample = () => {
     }, [calculateResult]);
 
     const handleCalculate = () => {
-        const input = Math.floor(Math.random() * 10) + 1;
-        const calculatedResult = calculateResult(input);
-        console.log('Calculated result: ' + calculatedResult);
+        const number = 5;
+        const calculatedResult = calculateResult(number);
+        setResult(calculatedResult);
     };
 
     return (
