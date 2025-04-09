@@ -1,14 +1,13 @@
 import React from 'react';
 
-const Overview: React.FC = () => {
-    const basicSyntax = `useEffect(() => {
+const basicSyntax = `useEffect(() => {
     // effect code here
     return () => {
         // cleanup code here
     };
 }, [dependencies]);`;
 
-    const dependencyExamples = `useEffect(() => {
+const dependencyExamples = `useEffect(() => {
     // runs only once on mount
 }, []);  // empty dependency array
 
@@ -20,13 +19,14 @@ useEffect(() => {
     // runs on every render
 });  // no dependency array`;
 
-    const cleanupExample = `useEffect(() => {
+const cleanupExample = `useEffect(() => {
     const subscription = someAPI.subscribe();
     return () => {
         subscription.unsubscribe();
     };
 }, []);`;
 
+const Overview: React.FC = () => {
     return (
         <section id="overview" className="mb-12">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">Overview</h2>

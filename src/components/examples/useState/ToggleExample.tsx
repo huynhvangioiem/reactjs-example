@@ -1,15 +1,8 @@
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 
-const ToggleExample: React.FC = () => {
-    const [isOn, setIsOn] = useState(false);
-
-    const toggleState = () => {
-        setIsOn(prevState => !prevState);
-    };
-
-    const codeExample =
-        `import { useState } from 'react';
+const codeExample =
+    `import { useState } from 'react';
 
 const Toggle = () => {
     const [isOn, setIsOn] = useState(false);
@@ -27,6 +20,13 @@ const Toggle = () => {
         </div>
     );
 };`;
+
+const ToggleExample: React.FC = () => {
+    const [isOn, setIsOn] = useState(false);
+
+    const toggleState = () => {
+        setIsOn(prevState => !prevState);
+    };
 
     return (
         <section id="toggle" className="mb-12">

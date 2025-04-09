@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import UseState from "./pages/UseState";
-import UseEffect from "./pages/UseEffect.tsx";
+import UseEffect from "./pages/UseEffect";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import UseCallback from "./pages/UseCallback.tsx";

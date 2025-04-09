@@ -1,37 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 
-const TimerExample: React.FC = () => {
-    const [seconds, setSeconds] = useState(0);
-    const [isRunning, setIsRunning] = useState(false);
-
-    useEffect(() => {
-        let intervalId: NodeJS.Timeout;
-
-        if (isRunning) {
-            intervalId = setInterval(() => {
-                setSeconds(prev => prev + 1);
-            }, 1000);
-        }
-
-        // Cleanup function
-        return () => {
-            if (intervalId) {
-                clearInterval(intervalId);
-            }
-        };
-    }, [isRunning]);
-
-    const toggleTimer = () => {
-        setIsRunning(prev => !prev);
-    };
-
-    const resetTimer = () => {
-        setIsRunning(false);
-        setSeconds(0);
-    };
-
-    const codeExample = `import React, { useState, useEffect } from 'react';
+const codeExample = `import React, { useState, useEffect } from 'react';
 
 const Timer = () => {
     const [seconds, setSeconds] = useState(0);
@@ -68,6 +38,36 @@ const Timer = () => {
     );
 };`;
 
+const TimerExample: React.FC = () => {
+    const [seconds, setSeconds] = useState(0);
+    const [isRunning, setIsRunning] = useState(false);
+
+    useEffect(() => {
+        let intervalId: NodeJS.Timeout;
+
+        if (isRunning) {
+            intervalId = setInterval(() => {
+                setSeconds(prev => prev + 1);
+            }, 1000);
+        }
+
+        // Cleanup function
+        return () => {
+            if (intervalId) {
+                clearInterval(intervalId);
+            }
+        };
+    }, [isRunning]);
+
+    const toggleTimer = () => {
+        setIsRunning(prev => !prev);
+    };
+
+    const resetTimer = () => {
+        setIsRunning(false);
+        setSeconds(0);
+    };
+
     return (
         <section id="timer" className="mb-12">
             <h2 className="text-2xl font-bold mb-4">Timer Example</h2>
@@ -101,4 +101,4 @@ const Timer = () => {
     );
 };
 
-export default TimerExample; 
+export default TimerExample;
