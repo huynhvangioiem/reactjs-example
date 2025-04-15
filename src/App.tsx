@@ -6,6 +6,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import UseCallback from "./pages/UseCallback";
 import UseMemo from "./pages/UseMemo";
+import UseContext from "./pages/UseContext";
 
 function App() {
     return (
@@ -18,6 +19,7 @@ function App() {
                     <Route path="useeffect" element={<UseEffect />} />
                     <Route path="usecallback" element={<UseCallback />} />
                     <Route path="usememo" element={<UseMemo />} />
+                    <Route path="usecontext" element={<UseContext />} />
                 </Routes>
                 <Footer />
             </div>
