@@ -19,11 +19,15 @@ const Home: React.FC = () => {
             description: 'Memoize functions to prevent unnecessary re-renders'
         },
         {
+            to: 'usememo',
+            title: 'useMemo',
+            description: 'Memoize expensive calculations to optimize performance'
+        },
+        {
             to: 'usecontext',
             title: 'useContext',
             description: 'Share data without prop drilling'
         },
-
     ];
 
     return (
