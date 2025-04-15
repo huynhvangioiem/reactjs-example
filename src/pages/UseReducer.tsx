@@ -1,20 +1,22 @@
 import React from "react";
 import ExampleHeader from "../components/ExampleHeader";
 import ExampleSidebar from "../components/ExampleSidebar";
-import Overview from "../components/examples/useContext/Overview";
-import ThemeExample from "../components/examples/useContext/ThemeExample";
+import Overview from "../components/examples/useReducer/Overview";
+import TodoExample from "../components/examples/useReducer/TodoExample";
+import ShoppingCartExample from "../components/examples/useReducer/ShoppingCartExample";
 
-const UseContext: React.FC = () => {
+const UseReducer: React.FC = () => {
     const sidebarSections = [
         { id: "overview", title: "Overview" },
-        { id: "theme-example", title: "Theme Example" },
+        { id: "todo-example", title: "Todo Example" },
+        { id: "shopping-cart-example", title: "Shopping Cart Example" },
     ];
 
     return (
         <div className="min-h-screen bg-white">
             <ExampleHeader
-                title="useContext Examples"
-                description="Explore various examples demonstrating the use of the useContext hook in React."
+                title="useReducer Examples"
+                description="Explore various examples demonstrating the use of the useReducer hook in React."
             />
             {/* Main Content with Sidebar */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -23,7 +25,8 @@ const UseContext: React.FC = () => {
                     <main className="flex-1">
                         <div className="prose max-w-none">
                             <Overview />
-                            <ThemeExample />
+                            <TodoExample />
+                            <ShoppingCartExample />
                         </div>
                     </main>
 
@@ -35,4 +38,4 @@ const UseContext: React.FC = () => {
     );
 };
 
-export default UseContext;
+export default UseReducer; 

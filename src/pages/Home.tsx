@@ -28,6 +28,11 @@ const Home: React.FC = () => {
             title: 'useContext',
             description: 'Share data without prop drilling'
         },
+        {
+            to: 'usereducer',
+            title: 'useReducer',
+            description: 'Manage complex state with reducers'
+        },
     ];
 
     return (
