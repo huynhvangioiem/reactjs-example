@@ -11,7 +11,7 @@ const NavigationCard: React.FC<NavigationCardProps> = ({ to, title, description 
     return (
         <Link
             to={to}
-            className="bg-white p-6 rounded-lg shadow-md text-center hover:bg-blue-50"
+            className="bg-white p-6 rounded-lg shadow-md border border-gray-200 text-center hover:bg-blue-50"
         >
             <h2 className="text-xl font-semibold text-blue-600">{title}</h2>
             <p className="text-gray-600 mt-2">{description}</p>
@@ -19,4 +19,4 @@ const NavigationCard: React.FC<NavigationCardProps> = ({ to, title, description 
     );
 };
 
-export default NavigationCard; 
+export default NavigationCard;
