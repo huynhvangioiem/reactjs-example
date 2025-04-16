@@ -52,19 +52,18 @@ const Home: React.FC = () => {
             ]
         },
         {
-            title: 'Higher-Order Components',
-            description: 'A Higher-Order Component (HOC) is an advanced technique in React for reusing component logic. HOCs are functions that take a component and return a new component.',
+            title: 'Built-in React APIs',
+            description: 'React provides several built-in APIs that can be used to optimize performance and simplify code.',
             keyPoints: [
-                'HOCs don\'t modify the input component',
-                'HOCs should be pure functions',
-                'Don\'t use HOCs inside the render method',
-                'Pass unrelated props through to the wrapped component'
+                'React.memo: Prevent unnecessary re-renders of functional components',
+                'React.lazy: Code-split your application for better performance',
+                'React.Suspense: Handle loading states for lazy-loaded components'
             ],
             items: [
                 {
-                    to: 'hoc',
-                    title: 'HOC',
-                    description: 'Learn about Higher-Order Components'
+                    to: 'react-memo',
+                    title: 'React.memo',
+                    description: 'Optimize functional components by preventing unnecessary re-renders'
                 }
             ]
         }
