@@ -44,18 +44,6 @@ const Home: React.FC = () => {
                     title: 'useReducer',
                     description: 'Manage complex state with reducers'
                 },
-            ]
-        },
-        {
-            title: 'Custom Hooks',
-            description: 'Custom Hooks are JavaScript functions that start with "use" and may call other Hooks. They let you extract component logic into reusable functions.',
-            keyPoints: [
-                'Custom hooks can use other hooks',
-                'Each call to a custom hook gets isolated state',
-                'Custom hooks can accept arguments',
-                'They help reduce code duplication'
-            ],
-            items: [
                 {
                     to: 'custom-hooks',
                     title: 'Custom Hooks',

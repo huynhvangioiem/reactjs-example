@@ -8,6 +8,7 @@ import UseCallback from "./pages/UseCallback";
 import UseMemo from "./pages/UseMemo";
 import UseContext from "./pages/UseContext";
 import UseReducer from "./pages/UseReducer";
+import CustomHooks from "./pages/CustomHooks";
 
 function App() {
     return (
@@ -22,6 +23,7 @@ function App() {
                     <Route path="usememo" element={<UseMemo />} />
                     <Route path="usecontext" element={<UseContext />} />
                     <Route path="usereducer" element={<UseReducer />} />
+                    <Route path="custom-hooks" element={<CustomHooks />} />
                 </Routes>
                 <Footer />
             </div>
