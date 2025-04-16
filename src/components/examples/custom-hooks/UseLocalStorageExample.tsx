@@ -18,7 +18,7 @@ const useLocalStorage = <T,>(key: string, initialValue: T): [T, (value: T) => vo
 
     const setValue = (value: T) => {
         try {
-            const valueToStore = value instanceof Function ? value(storedValue) : value;
+            const valueToStore = typeof value === 'function' ? value(storedValue) : value;
             setStoredValue(valueToStore);
             window.localStorage.setItem(key, JSON.stringify(valueToStore));
         } catch (error) {
@@ -87,7 +87,7 @@ const useLocalStorage = <T,>(key: string, initialValue: T): [T, (value: T) => vo
     const setValue = (value: T) => {
         try {
             // Allow value to be a function so we have same API as useState
-            const valueToStore = value instanceof Function ? value(storedValue) : value;
+            const valueToStore = typeof value === 'function' ? value(storedValue) : value;
             setStoredValue(valueToStore);
             window.localStorage.setItem(key, JSON.stringify(valueToStore));
         } catch (error) {

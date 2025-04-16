@@ -3,10 +3,13 @@ import ExampleHeader from "../components/ExampleHeader";
 import ExampleSidebar from "../components/ExampleSidebar";
 import Overview from "../components/examples/custom-hooks/Overview";
 import UseLocalStorageExample from "../components/examples/custom-hooks/UseLocalStorageExample";
+import UseDebounceExample from "../components/examples/custom-hooks/UseDebounceExample";
+
 const CustomHooks: React.FC = () => {
     const sidebarSections = [
         { id: "overview", title: "Overview" },
         { id: "local-storage", title: "useLocalStorage Example" },
+        { id: "debounce", title: "useDebounce Example" },
     ];
 
     return (
@@ -23,6 +26,7 @@ const CustomHooks: React.FC = () => {
                         <div className="prose max-w-none">
                             <Overview />
                             <UseLocalStorageExample />
+                            <UseDebounceExample />
                         </div>
                     </main>
 
