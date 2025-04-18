@@ -9,7 +9,7 @@ import UseMemo from "./pages/UseMemo";
 import UseContext from "./pages/UseContext";
 import UseReducer from "./pages/UseReducer";
 import CustomHooks from "./pages/CustomHooks";
-
+import ReactMemo from "./pages/ReactMemo";
 function App() {
     return (
         <Router basename="reactjs-example">
@@ -24,6 +24,7 @@ function App() {
                     <Route path="usecontext" element={<UseContext />} />
                     <Route path="usereducer" element={<UseReducer />} />
                     <Route path="custom-hooks" element={<CustomHooks />} />
+                    <Route path="react-memo" element={<ReactMemo />} />
                 </Routes>
                 <Footer />
             </div>
