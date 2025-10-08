@@ -49,6 +49,14 @@ const TodoList: React.FC = () => {
         }
     };
 
+    const handleToggle = (id: string) => {
+        dispatch({ type: 'TOGGLE_TODO', id });
+    };
+
+    const handleDelete = (id: string) => {
+        dispatch({ type: 'DELETE_TODO', id });
+    };
+
     return (
         <div className="space-y-4">
             <form onSubmit={handleSubmit} className="flex gap-2">
@@ -79,13 +87,13 @@ const TodoList: React.FC = () => {
                         </span>
                         <div className="flex gap-2">
                             <button
-                                onClick={() => dispatch({ type: 'TOGGLE_TODO', id: todo.id })}
+                                onClick={() => handleToggle(todo.id)}
                                 className="px-3 py-1 bg-green-500 text-white rounded hover:bg-green-600 transition-colors"
                             >
                                 Toggle
                             </button>
                             <button
-                                onClick={() => dispatch({ type: 'DELETE_TODO', id: todo.id })}
+                                onClick={() => handleDelete(todo.id)}
                                 className="px-3 py-1 bg-red-500 text-white rounded hover:bg-red-600 transition-colors"
                             >
                                 Delete
@@ -145,6 +153,14 @@ const TodoList: React.FC = () => {
         }
     };
 
+    const handleToggle = (id: string) => {
+        dispatch({ type: 'TOGGLE_TODO', id });
+    };
+
+    const handleDelete = (id: string) => {
+        dispatch({ type: 'DELETE_TODO', id });
+    };
+
     return (
         <div className="space-y-4">
             <form onSubmit={handleSubmit} className="flex gap-2">
@@ -175,13 +191,13 @@ const TodoList: React.FC = () => {
                         </span>
                         <div className="flex gap-2">
                             <button
-                                onClick={() => dispatch({ type: 'TOGGLE_TODO', id: todo.id })}
+                                onClick={() => handleToggle(todo.id)}
                                 className="px-3 py-1 bg-green-500 text-white rounded hover:bg-green-600 transition-colors"
                             >
                                 Toggle
                             </button>
                             <button
-                                onClick={() => dispatch({ type: 'DELETE_TODO', id: todo.id })}
+                                onClick={() => handleDelete(todo.id)}
                                 className="px-3 py-1 bg-red-500 text-white rounded hover:bg-red-600 transition-colors"
                             >
                                 Delete
