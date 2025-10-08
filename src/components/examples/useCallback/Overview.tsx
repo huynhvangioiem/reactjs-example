@@ -8,10 +8,11 @@ const simpleExample = `const handleClick = useCallback(() => {
 }, []); // No dependencies`;
 
 const withDependenciesExample = `const [count, setCount] = useState(0);
+const [step, setStep] = useState(1);
 
 const handleIncrement = useCallback(() => {
-    setCount(prevCount => prevCount + 1);
-}, []); // No dependencies needed`;
+    setCount(prev => prev + step);
+}, [step]); // Recreate when step changes`;
 
 const withMemoExample = `const MemoizedChild = memo(({ onAction }) => {
     return <button onClick={onAction}>Click me</button>;

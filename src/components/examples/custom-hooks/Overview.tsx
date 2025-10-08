@@ -1,9 +1,14 @@
 import React from 'react';
 
-const basicSyntax = `// Custom hooks can return any values based on their purpose
+const basicSyntax = `// Custom hooks can return values when they need to expose data
 const useCustomHook = (params) => {
     // Hook logic here
     return value; // Can be any value, function, or object
+};
+
+// They can also be void functions when only side effects are needed
+const useVoidCustomHook = (params): void => {
+    // Side-effect logic here (e.g., event listeners, analytics)
 };`;
 
 const Overview: React.FC = () => {
@@ -26,7 +31,7 @@ const Overview: React.FC = () => {
                         <li>Must start with the "use" prefix</li>
                         <li>Can use other React Hooks inside them</li>
                         <li>Each call to a custom Hook gets its own isolated state</li>
-                        <li>Can accept any arguments and return any values</li>
+                        <li>Can accept any arguments and return any values—or nothing at all</li>
                         <li>Help extract and share common component logic</li>
                     </ul>
                 </div>
