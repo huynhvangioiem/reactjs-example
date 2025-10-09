@@ -1,14 +1,18 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { Button } from '@/components/ui/button';
 
 const codeExample = `const TodoInput = () => {
-    const [todos, setTodos] = useState<string[]>([]);
+    const [todos, setTodos] = useState<Array<{ id: number; text: string }>>([]);
     const [text, setText] = useState('');
+    const nextId = React.useRef(0);
 
     const handleSubmit = (event: React.FormEvent) => {
         event.preventDefault();
         if (!text.trim()) return;
-        setTodos((prev) => [...prev, text.trim()]);
+        setTodos((prev) => [
+            ...prev,
+            { id: nextId.current++, text: text.trim() },
+        ]);
         setText('');
     };
 
@@ -17,8 +21,8 @@ const codeExample = `const TodoInput = () => {
             <input value={text} onChange={(event) => setText(event.target.value)} />
             <button type="submit">Add task</button>
             <ul>
-                {todos.map((todo, index) => (
-                    <li key={todo + index}>{todo}</li>
+                {todos.map((todo) => (
+                    <li key={todo.id}>{todo.text}</li>
                 ))}
             </ul>
         </form>
@@ -26,14 +30,18 @@ const codeExample = `const TodoInput = () => {
 };`;
 
 const TodoInputExample: React.FC = () => {
-    const [todos, setTodos] = useState<string[]>([]);
+    const [todos, setTodos] = useState<Array<{ id: number; text: string }>>([]);
     const [text, setText] = useState('');
+    const nextId = useRef(0);
 
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         const trimmed = text.trim();
         if (!trimmed) return;
-        setTodos((previous) => [...previous, trimmed]);
+        setTodos((previous) => [
+            ...previous,
+            { id: nextId.current++, text: trimmed },
+        ]);
         setText('');
     };
 
@@ -61,13 +69,13 @@ const TodoInputExample: React.FC = () => {
                     <p className="text-gray-500">No tasks yet. Add your first one!</p>
                 ) : (
                     <ul className="space-y-2">
-                        {todos.map((todo, index) => (
+                        {todos.map((todo) => (
                             <li
-                                key={`${todo}-${index}`}
+                                key={todo.id}
                                 className="flex items-center gap-2 bg-blue-50 border border-blue-200 rounded-lg px-3 py-2 text-blue-900"
                             >
                                 <span className="h-2 w-2 rounded-full bg-blue-500" />
-                                {todo}
+                                {todo.text}
                             </li>
                         ))}
                     </ul>
