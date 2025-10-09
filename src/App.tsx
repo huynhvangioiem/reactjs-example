@@ -10,6 +10,11 @@ import UseContext from "./pages/UseContext";
 import UseReducer from "./pages/UseReducer";
 import CustomHooks from "./pages/CustomHooks";
 import ReactMemo from "./pages/ReactMemo";
+import HelloReact from "./pages/HelloReact";
+import ComponentsAndProps from "./pages/ComponentsAndProps";
+import StateAndEvents from "./pages/StateAndEvents";
+import ConditionalAndLists from "./pages/ConditionalAndLists";
+import ComponentComposition from "./pages/ComponentComposition";
 function App() {
     return (
         <Router basename="reactjs-example">
@@ -17,6 +22,11 @@ function App() {
                 <Header />
                 <Routes>
                     <Route path="" element={<Home />} />
+                    <Route path="hello-react" element={<HelloReact />} />
+                    <Route path="hello-react/components-props" element={<ComponentsAndProps />} />
+                    <Route path="hello-react/state-events" element={<StateAndEvents />} />
+                    <Route path="hello-react/conditional-lists" element={<ConditionalAndLists />} />
+                    <Route path="hello-react/component-composition" element={<ComponentComposition />} />
                     <Route path="usestate" element={<UseState />} />
                     <Route path="useeffect" element={<UseEffect />} />
                     <Route path="usecallback" element={<UseCallback />} />

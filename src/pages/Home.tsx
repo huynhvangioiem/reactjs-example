@@ -5,6 +5,42 @@ import SectionContent from '../components/home/SectionContent';
 const Home: React.FC = () => {
     const navigationGroups = [
         {
+            title: 'Hello React',
+            description: 'Get a quick primer on JSX, rendering, and props before diving into React hooks and advanced topics.',
+            keyPoints: [
+                'JSX lets you mix markup-like syntax with JavaScript expressions',
+                'React maps JSX to a virtual tree before touching the DOM',
+                'Props allow components to stay reusable and data-driven'
+            ],
+            items: [
+                {
+                    to: 'hello-react',
+                    title: 'JSX',
+                    description: 'Understand JSX syntax and how React turns it into UI.'
+                },
+                {
+                    to: 'hello-react/components-props',
+                    title: 'Components & Props',
+                    description: 'Build reusable function components and pass data with confidence.'
+                },
+                {
+                    to: 'hello-react/state-events',
+                    title: 'State & Events',
+                    description: 'Manage state, handle events, and keep updates immutable.'
+                },
+                {
+                    to: 'hello-react/conditional-lists',
+                    title: 'Conditional & Lists',
+                    description: 'Render conditional UI and map collections with stable keys.'
+                },
+                {
+                    to: 'hello-react/component-composition',
+                    title: 'Component Composition',
+                    description: 'Compose layouts with children, render props, and slot patterns.'
+                }
+            ]
+        },
+        {
             title: 'React Hooks',
             description: 'Hooks are functions that let you "hook into" React state and lifecycle features from function components. They allow you to use state and other React features without writing a class.',
             keyPoints: [
