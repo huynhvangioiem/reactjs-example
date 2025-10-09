@@ -71,6 +71,11 @@ const Home: React.FC = () => {
                     description: 'Memoize expensive calculations to optimize performance'
                 },
                 {
+                    to: 'useref',
+                    title: 'useRef',
+                    description: 'Persist mutable values and work with DOM elements'
+                },
+                {
                     to: 'usecontext',
                     title: 'useContext',
                     description: 'Share data without prop drilling'

@@ -10,6 +10,7 @@ import UseContext from "./pages/UseContext";
 import UseReducer from "./pages/UseReducer";
 import CustomHooks from "./pages/CustomHooks";
 import ReactMemo from "./pages/ReactMemo";
+import UseRef from "./pages/UseRef";
 import HelloReact from "./pages/HelloReact";
 import ComponentsAndProps from "./pages/ComponentsAndProps";
 import StateAndEvents from "./pages/StateAndEvents";
@@ -23,14 +24,27 @@ function App() {
                 <Routes>
                     <Route path="" element={<Home />} />
                     <Route path="hello-react" element={<HelloReact />} />
-                    <Route path="hello-react/components-props" element={<ComponentsAndProps />} />
-                    <Route path="hello-react/state-events" element={<StateAndEvents />} />
-                    <Route path="hello-react/conditional-lists" element={<ConditionalAndLists />} />
-                    <Route path="hello-react/component-composition" element={<ComponentComposition />} />
+                    <Route
+                        path="hello-react/components-props"
+                        element={<ComponentsAndProps />}
+                    />
+                    <Route
+                        path="hello-react/state-events"
+                        element={<StateAndEvents />}
+                    />
+                    <Route
+                        path="hello-react/conditional-lists"
+                        element={<ConditionalAndLists />}
+                    />
+                    <Route
+                        path="hello-react/component-composition"
+                        element={<ComponentComposition />}
+                    />
                     <Route path="usestate" element={<UseState />} />
                     <Route path="useeffect" element={<UseEffect />} />
                     <Route path="usecallback" element={<UseCallback />} />
                     <Route path="usememo" element={<UseMemo />} />
+                    <Route path="useref" element={<UseRef />} />
                     <Route path="usecontext" element={<UseContext />} />
                     <Route path="usereducer" element={<UseReducer />} />
                     <Route path="custom-hooks" element={<CustomHooks />} />
