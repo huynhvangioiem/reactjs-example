@@ -10,6 +10,8 @@ import UseContext from "./pages/UseContext";
 import UseReducer from "./pages/UseReducer";
 import CustomHooks from "./pages/CustomHooks";
 import ReactMemo from "./pages/ReactMemo";
+import ReactLazy from "./pages/ReactLazy";
+import ReactSuspense from "./pages/ReactSuspense";
 import UseRef from "./pages/UseRef";
 import HelloReact from "./pages/HelloReact";
 import ComponentsAndProps from "./pages/ComponentsAndProps";
@@ -49,6 +51,8 @@ function App() {
                     <Route path="usereducer" element={<UseReducer />} />
                     <Route path="custom-hooks" element={<CustomHooks />} />
                     <Route path="react-memo" element={<ReactMemo />} />
+                    <Route path="react-lazy" element={<ReactLazy />} />
+                    <Route path="react-suspense" element={<ReactSuspense />} />
                 </Routes>
                 <Footer />
             </div>

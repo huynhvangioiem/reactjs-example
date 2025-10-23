@@ -105,6 +105,16 @@ const Home: React.FC = () => {
                     to: 'react-memo',
                     title: 'React.memo',
                     description: 'Optimize functional components by preventing unnecessary re-renders'
+                },
+                {
+                    to: 'react-lazy',
+                    title: 'React.lazy',
+                    description: 'Split bundles and load components on demand with Suspense fallbacks'
+                },
+                {
+                    to: 'react-suspense',
+                    title: 'React.Suspense',
+                    description: 'Coordinate loading states by wrapping slow parts of the tree'
                 }
             ]
         }
