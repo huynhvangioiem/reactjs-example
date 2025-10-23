@@ -1,128 +1,149 @@
-import React from 'react';
-import ExampleSidebar from '../components/ExampleSidebar';
-import SectionContent from '../components/home/SectionContent';
+import React from "react";
+import ExampleSidebar from "../components/ExampleSidebar";
+import SectionContent from "../components/home/SectionContent";
 
 const Home: React.FC = () => {
     const navigationGroups = [
         {
-            title: 'Hello React',
-            description: 'Get a quick primer on JSX, rendering, and props before diving into React hooks and advanced topics.',
+            title: "Hello React",
+            description:
+                "Get a quick primer on JSX, rendering, and props before diving into React hooks and advanced topics.",
             keyPoints: [
-                'JSX lets you mix markup-like syntax with JavaScript expressions',
-                'React maps JSX to a virtual tree before touching the DOM',
-                'Props allow components to stay reusable and data-driven'
+                "JSX lets you mix markup-like syntax with JavaScript expressions",
+                "React maps JSX to a virtual tree before touching the DOM",
+                "Props allow components to stay reusable and data-driven",
             ],
             items: [
                 {
-                    to: 'hello-react',
-                    title: 'JSX',
-                    description: 'Understand JSX syntax and how React turns it into UI.'
+                    to: "hello-react",
+                    title: "JSX",
+                    description:
+                        "Understand JSX syntax and how React turns it into UI.",
                 },
                 {
-                    to: 'hello-react/components-props',
-                    title: 'Components & Props',
-                    description: 'Build reusable function components and pass data with confidence.'
+                    to: "hello-react/components-props",
+                    title: "Components & Props",
+                    description:
+                        "Build reusable function components and pass data with confidence.",
                 },
                 {
-                    to: 'hello-react/state-events',
-                    title: 'State & Events',
-                    description: 'Manage state, handle events, and keep updates immutable.'
+                    to: "hello-react/state-events",
+                    title: "State & Events",
+                    description:
+                        "Manage state, handle events, and keep updates immutable.",
                 },
                 {
-                    to: 'hello-react/conditional-lists',
-                    title: 'Conditional & Lists',
-                    description: 'Render conditional UI and map collections with stable keys.'
+                    to: "hello-react/conditional-lists",
+                    title: "Conditional & Lists",
+                    description:
+                        "Render conditional UI and map collections with stable keys.",
                 },
                 {
-                    to: 'hello-react/component-composition',
-                    title: 'Component Composition',
-                    description: 'Compose layouts with children, render props, and slot patterns.'
-                }
-            ]
+                    to: "hello-react/component-composition",
+                    title: "Component Composition",
+                    description:
+                        "Compose layouts with children, render props, and slot patterns.",
+                },
+            ],
         },
         {
-            title: 'React Hooks',
-            description: 'Hooks are functions that let you "hook into" React state and lifecycle features from function components. They allow you to use state and other React features without writing a class.',
+            title: "React Hooks",
+            description:
+                'Hooks are functions that let you "hook into" React state and lifecycle features from function components. They allow you to use state and other React features without writing a class.',
             keyPoints: [
-                'Hooks can only be called at the top level of your component',
-                'Hooks can only be called from React function components',
-                'Hooks must be called in the same order on every render',
-                'Custom hooks must start with "use" prefix'
+                "Hooks can only be called at the top level of your component",
+                "Hooks can only be called from React function components",
+                "Hooks must be called in the same order on every render",
+                'Custom hooks must start with "use" prefix',
             ],
             items: [
                 {
-                    to: 'usestate',
-                    title: 'useState',
-                    description: 'Manage state in function components'
+                    to: "usestate",
+                    title: "useState",
+                    description: "Manage state in function components",
                 },
                 {
-                    to: 'useeffect',
-                    title: 'useEffect',
-                    description: 'Handle side effects in your app'
+                    to: "useeffect",
+                    title: "useEffect",
+                    description: "Handle side effects in your app",
                 },
                 {
-                    to: 'usecallback',
-                    title: 'useCallback',
-                    description: 'Memoize functions to prevent unnecessary re-renders'
+                    to: "usecallback",
+                    title: "useCallback",
+                    description:
+                        "Memoize functions to prevent unnecessary re-renders",
                 },
                 {
-                    to: 'usememo',
-                    title: 'useMemo',
-                    description: 'Memoize expensive calculations to optimize performance'
+                    to: "usememo",
+                    title: "useMemo",
+                    description:
+                        "Memoize expensive calculations to optimize performance",
                 },
                 {
-                    to: 'useref',
-                    title: 'useRef',
-                    description: 'Persist mutable values and work with DOM elements'
+                    to: "useref",
+                    title: "useRef",
+                    description:
+                        "Persist mutable values and work with DOM elements",
                 },
                 {
-                    to: 'usecontext',
-                    title: 'useContext',
-                    description: 'Share data without prop drilling'
+                    to: "usecontext",
+                    title: "useContext",
+                    description: "Share data without prop drilling",
                 },
                 {
-                    to: 'usereducer',
-                    title: 'useReducer',
-                    description: 'Manage complex state with reducers'
+                    to: "usereducer",
+                    title: "useReducer",
+                    description: "Manage complex state with reducers",
                 },
                 {
-                    to: 'custom-hooks',
-                    title: 'Custom Hooks',
-                    description: 'Create reusable custom hooks'
-                }
-            ]
+                    to: "custom-hooks",
+                    title: "Custom Hooks",
+                    description: "Create reusable custom hooks",
+                },
+            ],
         },
         {
-            title: 'Built-in React APIs',
-            description: 'React provides several built-in APIs that can be used to optimize performance and simplify code.',
+            title: "Built-in React APIs",
+            description:
+                "React provides several built-in APIs that can be used to optimize performance and handle errors gracefully.",
             keyPoints: [
-                'React.memo: Prevent unnecessary re-renders of functional components',
-                'React.lazy: Code-split your application for better performance',
-                'React.Suspense: Handle loading states for lazy-loaded components'
+                "React.memo: Prevent unnecessary re-renders of functional components",
+                "React.lazy: Code-split your application for better performance",
+                "React.Suspense: Handle loading states for lazy-loaded components",
+                "Error Boundaries: Catch JavaScript errors and display fallback UI",
             ],
             items: [
                 {
-                    to: 'react-memo',
-                    title: 'React.memo',
-                    description: 'Optimize functional components by preventing unnecessary re-renders'
+                    to: "react-memo",
+                    title: "React.memo",
+                    description:
+                        "Optimize functional components by preventing unnecessary re-renders",
                 },
                 {
-                    to: 'react-lazy',
-                    title: 'React.lazy',
-                    description: 'Split bundles and load components on demand with Suspense fallbacks'
+                    to: "react-lazy",
+                    title: "React.lazy",
+                    description:
+                        "Split bundles and load components on demand with Suspense fallbacks",
                 },
                 {
-                    to: 'react-suspense',
-                    title: 'React.Suspense',
-                    description: 'Coordinate loading states by wrapping slow parts of the tree'
-                }
-            ]
-        }
+                    to: "react-suspense",
+                    title: "React.Suspense",
+                    description:
+                        "Coordinate loading states by wrapping slow parts of the tree",
+                },
+                {
+                    to: "error-boundaries",
+                    title: "Error Boundaries",
+                    description:
+                        "Catch JavaScript errors in component trees and display fallback UI",
+                },
+            ],
+        },
     ];
 
-    const sidebarSections = navigationGroups.map(group => ({
-        id: group.title.toLowerCase().replace(/\s+/g, '-'),
-        title: group.title
+    const sidebarSections = navigationGroups.map((group) => ({
+        id: group.title.toLowerCase().replace(/\s+/g, "-"),
+        title: group.title,
     }));
 
     return (
@@ -135,7 +156,9 @@ const Home: React.FC = () => {
                             {navigationGroups.map((group, groupIndex) => (
                                 <SectionContent
                                     key={groupIndex}
-                                    id={group.title.toLowerCase().replace(/\s+/g, '-')}
+                                    id={group.title
+                                        .toLowerCase()
+                                        .replace(/\s+/g, "-")}
                                     title={group.title}
                                     description={group.description}
                                     keyPoints={group.keyPoints}

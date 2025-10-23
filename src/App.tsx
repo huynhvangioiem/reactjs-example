@@ -18,6 +18,7 @@ import ComponentsAndProps from "./pages/ComponentsAndProps";
 import StateAndEvents from "./pages/StateAndEvents";
 import ConditionalAndLists from "./pages/ConditionalAndLists";
 import ComponentComposition from "./pages/ComponentComposition";
+import ErrorBoundaries from "./pages/ErrorBoundaries";
 function App() {
     return (
         <Router basename="reactjs-example">
@@ -53,6 +54,10 @@ function App() {
                     <Route path="react-memo" element={<ReactMemo />} />
                     <Route path="react-lazy" element={<ReactLazy />} />
                     <Route path="react-suspense" element={<ReactSuspense />} />
+                    <Route
+                        path="error-boundaries"
+                        element={<ErrorBoundaries />}
+                    />
                 </Routes>
                 <Footer />
             </div>
